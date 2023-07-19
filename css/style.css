@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #262626;
+}
+
+:root {
+    --main: 'Tektur', cursive;
+}
+
+body {
+    background-image: url(/Sprinkle.png);
+    background-blend-mode: darken;
+}
+.table{
+    border: #1a1a1a 4px solid;
+}
+.head {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.head h1 {
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--main);
+    background-color: #262626;
+    font-size: 4rem;
+    transition: all 0.5s;
+}
+
+.head h1:hover {
+    background-color: antiquewhite;
+    color: rgb(54, 53, 53);
+}
+
+.color {
+    color: #f5ebef;
+}
+
+.bookin h2 {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--main);
+    background-color: #262626;
+    transition: all 0.5s;
+}
+
+.bookin h2:hover {
+    background-color: antiquewhite;
+    color: rgb(54, 53, 53);
+}
+
+.btn-visit {
+    background-color: #A68042;
+    color: rgb(230, 219, 219);
+}
+
+.btn-visit:hover {
+    background-color: rgb(255, 255, 255);
+    border: #262626 1px solid;
+    color: #A68042;
+}
+
+.btn-delete {
+    background-color: rgb(255, 255, 255);
+    border: #262626 1px solid;
+    color: #A68042;
+}
+
+.btn-delete:hover {
+    background-color: #A68042;
+    color: rgb(230, 219, 219);
+    border: none;
+}
+.btn-submit {
+    background-color: rgb(255, 255, 255);
+    border: #262626 1px solid;
+    color: #A68042;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-submit:hover {
+    background-color: #A68042;
+    color: rgb(230, 219, 219);
+    border: none;
+}
+td p {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #cfa055;
+    font-style: italic;
+    padding-top: 5px;
+    font-family: var(--main);
+    letter-spacing: 2px;
+}
+.thead{
+    font-family: var(--main);
+    color: #A68042;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
