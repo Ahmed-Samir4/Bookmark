@@ -2,6 +2,8 @@
 var nameInput = document.getElementById('Name');
 var urlInput = document.getElementById('URL');
 var content = document.getElementById('tableContent');
+var allName = [];
+
 
 //for first time 
 if (localStorage.getItem('UrlData') != null) {
@@ -11,15 +13,29 @@ if (localStorage.getItem('UrlData') != null) {
     var allBook = [];
 }
 
+
 function add() {
-    var bookUrl = {
-        name: nameInput.value,
-        url: urlInput.value
+    if (nameInput.value == '' || urlInput.value == '') {
+        alert('Please enter the Name and the URL');
+    } else if (urlInput.value.includes('.com') || urlInput.value.includes('.net') || urlInput.value.includes('.org') || urlInput.value.includes('.edu') || urlInput.value.includes('.gov') || urlInput.value.includes('.mil')) {
+        if (allName.includes(nameInput.value)) {
+            alert('This Name is used. \nPlease enter new Name');
+        } else {
+            var bookUrl = {
+                name: nameInput.value,
+                url: urlInput.value
+            }
+            allBook.push(bookUrl);
+            localStorage.setItem('UrlData', JSON.stringify(allBook));
+            allName.push(nameInput.value)
+            nameInput.value = '';
+            urlInput.value = '';
+        }
+
+    } else {
+        alert('Please enter a valid URL domain \n it must contain ( .com , .net , .org , .edu , .gov , .mil ) ');
     }
-    allBook.push(bookUrl);
-    console.log(bookUrl);
-    console.log(allBook);
-    localStorage.setItem('UrlData', JSON.stringify(allBook));
+
 
     showData()
 }
@@ -57,5 +73,5 @@ function deleteItem(index) {
 }
 
 function visitPage(index) {
-    window.open(allBook[index].url, "_blank");
+    window.open(`https://${allBook[index].url}/`, "_blank");
 }

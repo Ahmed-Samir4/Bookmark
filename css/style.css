@@ -13,7 +13,7 @@
     --main: 'Tektur', cursive;
 }
 
-body {
+.bg-img {
     background-image: url(/css/Sprinkle.png);
     background-blend-mode: darken;
 }
@@ -33,7 +33,7 @@ body {
     font-family: var(--main);
     background-color: #262626;
     font-size: 4rem;
-    transition: all 0.5s;
+    transition: all 0.4s;
 }
 
 .head h1:hover {
@@ -50,14 +50,17 @@ body {
     border-radius: 5px;
     font-family: var(--main);
     background-color: #262626;
-    transition: all 0.5s;
+    transition: all 0.4s;
 }
 
 .bookin h2:hover {
     background-color: antiquewhite;
     color: rgb(54, 53, 53);
 }
-
+.bookin label{
+    background-color: #262626;
+    width: fit-content;
+}
 .btn-visit {
     background-color: #A68042;
     color: rgb(230, 219, 219);
