@@ -14,7 +14,7 @@
 }
 
 .bg-img {
-    background-image: url(/css/Sprinkle.png);
+    background-image: url(../css/Sprinkle.png);
     background-blend-mode: darken;
 }
 .table{
