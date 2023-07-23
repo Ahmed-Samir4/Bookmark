@@ -35,7 +35,7 @@ function add() {
             allBook.push(bookUrl);
             localStorage.setItem('UrlData', JSON.stringify(allBook));
             allName.push(nameInput.value)
-            localStorage.setItem('allNames',JSON.stringify(allName))
+            localStorage.setItem('allNames', JSON.stringify(allName))
             nameInput.value = '';
             urlInput.value = '';
         }
@@ -75,7 +75,9 @@ function showData() {
 
 function deleteItem(index) {
     allBook.splice(index, 1);
+    allName.splice(index, 1);
     localStorage.setItem('UrlData', JSON.stringify(allBook));
+    localStorage.setItem('allNames', JSON.stringify(allName));
 
     showData();
 }
