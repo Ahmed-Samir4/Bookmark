@@ -2,7 +2,6 @@
 var nameInput = document.getElementById('Name');
 var urlInput = document.getElementById('URL');
 var content = document.getElementById('tableContent');
-var allName = [];
 
 
 //for first time 
@@ -11,6 +10,14 @@ if (localStorage.getItem('UrlData') != null) {
     showData();
 } else {
     var allBook = [];
+}
+
+//for Names 
+if (localStorage.getItem('allNames') != null) {
+    var allName = JSON.parse(localStorage.getItem('allNames'));
+    showData();
+} else {
+    var allName = [];
 }
 
 
@@ -28,6 +35,7 @@ function add() {
             allBook.push(bookUrl);
             localStorage.setItem('UrlData', JSON.stringify(allBook));
             allName.push(nameInput.value)
+            localStorage.setItem('allNames',JSON.stringify(allName))
             nameInput.value = '';
             urlInput.value = '';
         }
