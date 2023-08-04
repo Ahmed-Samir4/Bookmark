@@ -83,5 +83,11 @@ function deleteItem(index) {
 }
 
 function visitPage(index) {
-    window.open(`https://${allBook[index].url}/`, "_blank");
+    var urlname = allBook[index].url;
+    if (urlname.includes('https://')) {
+        window.open(allBook[index].url, "_blank");
+    } else {
+        window.open(`https://${urlname}/`, "_blank");
+    }
+    
 }
